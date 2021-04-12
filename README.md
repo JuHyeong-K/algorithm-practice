@@ -2,6 +2,8 @@
 
 ## 프로그래머스 문제 풀이
 https://programmers.co.kr/learn/courses/30/lessons/12981
+
+### solution.py
 ```python
 def solution(n, words):
     answer = []
@@ -36,6 +38,7 @@ def solution(n, words):
 ```
 
 https://programmers.co.kr/learn/courses/30/lessons/12913
+### solution2.py
 ```python
 def solution(land):
     answer = 0
