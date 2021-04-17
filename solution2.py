@@ -10,3 +10,15 @@ def solution(land):
         else:
             answer += max(land[i])
     return answer
+
+# 강사님 코드(dp를 이용한 풀이)
+def solution(land):
+    dp = [[0 for _ in range(4)] for _ in range(2)]
+    n = len(land)
+    m = len(land[0])
+    
+    for i in range(n):
+        for j in range(m):
+            dp[i%2][j] = max(dp[(i-1)%2][:j] + dp[(i-1)%2][j+1:]) + land[i][j]
+    
+    return max(dp[(n-1)%2])

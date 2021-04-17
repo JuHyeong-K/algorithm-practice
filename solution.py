@@ -28,3 +28,12 @@ def solution(n, words):
         print(word_chain[-2][-1], word[0])
 
     return [0, 0]
+
+# 강사님 코드
+def solution(n, words):
+    words_spoken = set()
+    for i, w in enumerate(zip(words, words[1:])):
+        words_spoken.add(w[0])
+        if w[1] in words_spoken or w[0][-1] != w[1][0]:
+            return [(i+1)%n + 1, (i+1)//n + 1]
+    return [0, 0]
